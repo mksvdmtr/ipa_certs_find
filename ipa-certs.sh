@@ -40,5 +40,5 @@ done
 grep -i "subject: cn=" -A15 ${OUT_FILE_NAME} | \
         grep -ivP \
         "kerberos:|issuer:|upn:|fingerprint|principal name:|other name:|issuing ca:|certificate:|certificate chain:|entries returned:|certificates matched:|owner service:|revoked:|status:|not before:|serial number \(" | \
-        tr -d "-" | cat -s | sed 's/^ *//' > ${OUT_FILE_NAME}.filtered.txt
+        cat -s | sed 's/^ *//' > ${OUT_FILE_NAME}.filtered.txt
 
