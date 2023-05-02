@@ -1,7 +1,5 @@
 #!/bin/bash 
 
-set -e
-
 CURRENT_YEAR=$(date +%Y)
 CURRENT_MONTH=$(date +%m)
 STOP_YEAR=2023
@@ -39,6 +37,5 @@ done
 
 grep -i "subject: cn=" -A15 ${OUT_FILE_NAME} | \
         grep -ivP \
-        "kerberos:|issuer:|upn:|fingerprint|principal name:|other name:|issuing ca:|certificate:|certificate chain:|entries returned:|certificates matched:|owner service:|revoked:|status:|not before:|serial number \(" | \
-        cat -s | sed 's/^ *//' > ${OUT_FILE_NAME}.filtered.txt
+        "kerberos:|issuer:|upn:|fingerprint|principal name:|other name:|issuing ca:|certificate:|certificate chain:|entries returned:|certificates matched:|owner service:|revoked:|status:|not before:|serial number \(" | cat -s | sed 's/^ *//' > ${OUT_FILE_NAME}.filtered.txt
 
