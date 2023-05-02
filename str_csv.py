@@ -33,5 +33,5 @@ for line in certs_file_content:
         all.append(attrs)
         attrs = []
 
-pd.DataFrame(all).to_csv('out.csv') 
+pd.DataFrame(all).to_csv('export.csv') 
 
